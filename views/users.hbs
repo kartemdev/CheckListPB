@@ -1,0 +1,60 @@
+<script defer src="/js/addUser.js"></script>
+
+
+<div class="headercontainer">
+  <img src="/img/mountain.png" alt="logo" class="logo">
+  <div class="headertitle">Пользователи</div>
+  <a href="/mainPage"><button type="button" class="btn btn-secondary">Чек-листы</button></a>
+  <div>
+    <div class="hiuser">{{userName}}</div>
+    <button class="btn btn-secondary logout2">Выйти</button>
+  </div>
+</div>
+
+<div>
+
+    <div class="checkListCont">
+        <h3>Добавить нового пользователя</h3>
+    </div>
+
+  <div class="centerContent">
+
+  <form name="addEmployeeForm" id="employeeForm">
+  <div class="mb-3 addinputs">
+    <input type="text" name="employeeName" class="form-control" id="exampleInputEmail1" placeholder="Имя">
+    <input type="email" name="employeeMail" class="form-control" id="exampleInputPassword1" placeholder="Email">
+    <input type="password" name="employeePassword" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
+            <select name="employeeRole" form="employeeForm">
+                <option value="false">HR</option>
+                <option value="true">Admin</option>
+            </select>
+    <button type="submit" class="btn btn-primary addChB">Добавить</button>
+  </div>
+</form>
+
+    </div>
+<div class="checkListCont">
+
+
+    <h2>Пользователи</h2>
+    <div class="lists">
+        {{#each newUsers}}
+        <div class="list part">
+        <div class="employeeUser" id={{id}}>
+            <div class="userInfo">{{name}} - {{email}} {{#if admin}} - Admin{{/if}}</div>
+            <label for="selectChanger">Изменить роль:
+                <select id="selectChanger"  name="newEmployeeRole">
+                    <option value="false">HR</option>
+                    <option value="true">Admin</option>
+                </select>
+                <button class="btnChangeRole">Выбрать</button>
+            </label>
+
+            <div>
+                <button class="deleteUser">Удалить пользователя</button>
+            </div>
+        </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
