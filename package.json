@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WebDevLover/CheckListPB.git"
+    "url": "git+https://github.com/kartemdev/CheckListPB.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WebDevLover/CheckListPB/issues"
+    "url": "https://github.com/kartemdev/CheckListPB/issues"
   },
-  "homepage": "https://github.com/WebDevLover/CheckListPB#readme",
+  "homepage": "https://github.com/kartemdev/CheckListPB#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cookie-parser": "^1.4.6",
